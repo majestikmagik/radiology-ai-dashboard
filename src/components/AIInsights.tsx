@@ -156,17 +156,15 @@ export default function AIInsights() {
                     </span>
                   </div>
                 </div>
-                <div className="w-full bg-gray-200 rounded-full h-2">
-                  <div className="relative h-2 bg-gray-200 rounded-full overflow-hidden">
-                    <div 
-                      className="h-full bg-blue-600 rounded-full" 
-                      style={{ width: `${(metric.value / 100) * 100}%` }}
-                    ></div>
-                    <div 
-                      className="absolute top-0 w-0.5 h-full bg-red-400"
-                      style={{ left: `${metric.target}%` }}
-                    ></div>
-                  </div>
+                <div className="relative h-2 bg-gray-200 rounded-full overflow-hidden">
+                  <div 
+                    className="h-full bg-blue-600 rounded-full" 
+                    style={{ width: `${(metric.value / 100) * 100}%` }}
+                  ></div>
+                  <div 
+                    className="absolute top-0 w-0.5 h-full bg-red-400"
+                    style={{ left: `${metric.target}%` }}
+                  ></div>
                 </div>
               </div>
             ))}
