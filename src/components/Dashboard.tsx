@@ -13,8 +13,9 @@ export default function Dashboard() {
   const [activeTab, setActiveTab] = useState('overview');
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const [user] = useState({
-    name: 'Dr. Sarah Johnson',
+    name: 'Dr. Emily Johnson',
     role: 'Radiologist',
     avatar: '/api/placeholder/40/40'
   });
@@ -58,6 +59,8 @@ export default function Dashboard() {
         isOpen={sidebarOpen}
         onToggle={() => setSidebarOpen(!sidebarOpen)}
         isMobile={isMobile}
+        isCollapsed={sidebarCollapsed}
+        onToggleCollapse={() => setSidebarCollapsed(!sidebarCollapsed)}
       />
       
       <div className="flex-1 flex flex-col overflow-hidden">
