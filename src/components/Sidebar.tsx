@@ -39,7 +39,7 @@ export default function Sidebar({ activeTab, onTabChange, isOpen, onToggle, isMo
           <div className={`flex items-center justify-between ${isCollapsed ? 'flex-col space-y-4' : ''}`}>
             <div className={`flex items-center space-x-2 ${isCollapsed ? 'hidden' : 'flex'}`}>
               <Stethoscope className="h-6 w-6 lg:h-8 lg:w-8 text-blue-600" />
-              <h1 className="text-lg lg:text-xl font-bold text-gray-900">RadiologyAI</h1>
+              <h1 className="text-lg font-bold text-gray-900">RadiologyAI</h1>
             </div>
             
             {isCollapsed && (
@@ -58,7 +58,7 @@ export default function Sidebar({ activeTab, onTabChange, isOpen, onToggle, isMo
           </div>
           
           {!isCollapsed && (
-            <p className="text-xs lg:text-sm text-gray-500 mt-1">Cancer Detection CRM</p>
+            <p className="text-xs text-gray-500 mt-1">Cancer Detection CRM</p>
           )}
         </div>
         
@@ -77,10 +77,10 @@ export default function Sidebar({ activeTab, onTabChange, isOpen, onToggle, isMo
                         ? 'bg-blue-50 text-blue-700 border-r-2 border-blue-700'
                         : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
                     }`}
-                    title={isCollapsed ? item.label : ''}
+                    title={isCollapsed ? item.label : ""}
                   >
                     <Icon className={`h-5 w-5 ${isActive ? 'text-blue-700' : 'text-gray-400'}`} />
-                    {!isCollapsed && <span className="font-medium text-sm lg:text-base">{item.label}</span>}
+                    {!isCollapsed && <span className="font-medium text-sm">{item.label}</span>}
                     
                     {/* Tooltip for collapsed state */}
                     {isCollapsed && (
@@ -132,10 +132,9 @@ export default function Sidebar({ activeTab, onTabChange, isOpen, onToggle, isMo
                       isActive
                         ? 'bg-blue-50 text-blue-700 border-r-2 border-blue-700'
                         : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
-                    }`}
-                  >
+                    }`} >
                     <Icon className={`h-5 w-5 ${isActive ? 'text-blue-700' : 'text-gray-400'}`} />
-                    <span className="font-medium">{item.label}</span>
+                    <span className="font-medium text-sm">{item.label}</span>
                   </button>
                 </li>
               );

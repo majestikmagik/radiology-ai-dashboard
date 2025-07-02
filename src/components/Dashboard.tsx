@@ -8,6 +8,7 @@ import PatientsOverview from './PatientsOverview';
 import XRayAnalysis from './XRayAnalysis';
 import AIInsights from './AIInsights';
 import Reports from './Reports';
+import Settings from './Settings';
 
 export default function Dashboard() {
   const [activeTab, setActiveTab] = useState('overview');
@@ -86,6 +87,10 @@ export default function Dashboard() {
             
             <TabsContent value="reports" className="space-y-4 lg:space-y-6">
               <Reports />
+            </TabsContent>
+            
+            <TabsContent value="settings" className="space-y-4 lg:space-y-6">
+              <Settings />
             </TabsContent>
           </Tabs>
         </main>
