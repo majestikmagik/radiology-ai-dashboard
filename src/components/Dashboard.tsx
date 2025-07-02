@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
+import { Tabs, TabsContent } from './ui/tabs';
 import Sidebar from './Sidebar';
 import Header from './Header';
 import PatientsOverview from './PatientsOverview';
@@ -49,7 +49,7 @@ export default function Dashboard() {
       {/* Mobile overlay */}
       {isMobile && sidebarOpen && (
         <div 
-          className="fixed inset-0 z-40 lg:hidden cursor-pointer"
+          className="fixed inset-0 bg-black bg-opacity-5 z-40 lg:hidden cursor-pointer"
           onClick={() => setSidebarOpen(false)}
         />
       )}

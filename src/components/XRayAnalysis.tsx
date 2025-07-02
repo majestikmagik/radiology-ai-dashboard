@@ -1,8 +1,8 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { 
-  Upload, 
   Zap, 
   FileImage, 
   Brain, 
@@ -12,10 +12,24 @@ import {
   Eye
 } from 'lucide-react';
 
+interface Finding {
+  type: string;
+  location: string;
+  probability: number;
+  severity: string;
+}
+
+interface AnalysisResult {
+  confidence: number;
+  findings: Finding[];
+  recommendation: string;
+  riskLevel: string;
+}
+
 export default function XRayAnalysis() {
   const [uploadedImage, setUploadedImage] = useState<string | null>(null);
   const [isAnalyzing, setIsAnalyzing] = useState(false);
-  const [analysisResult, setAnalysisResult] = useState<any>(null);
+  const [analysisResult, setAnalysisResult] = useState<AnalysisResult | null>(null);
 
   const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
@@ -95,10 +109,13 @@ export default function XRayAnalysis() {
           ) : (
             <div className="space-y-4">
               <div className="relative">
-                <img 
+                <Image 
                   src={uploadedImage} 
                   alt="Uploaded X-Ray" 
-                  className="w-full h-48 sm:h-64 object-contain bg-black rounded-lg"
+                  layout="responsive"
+                  width={500}
+                  height={300}
+                  className="object-contain bg-black rounded-lg"
                 />
                 <button className="absolute top-2 right-2 bg-white p-1.5 sm:p-2 rounded-full shadow-lg hover:bg-gray-50 cursor-pointer">
                   <Eye className="h-3 w-3 sm:h-4 sm:w-4 text-gray-600" />
@@ -164,7 +181,7 @@ export default function XRayAnalysis() {
               <div>
                 <h4 className="text-sm font-medium text-gray-900 mb-3">Key Findings</h4>
                 <div className="space-y-3">
-                  {analysisResult.findings.map((finding: any, index: number) => (
+                  {analysisResult.findings.map((finding: Finding, index: number) => (
                     <div key={index} className="border border-gray-200 rounded-lg p-3">
                       <div className="flex items-center justify-between mb-2">
                         <span className="font-medium text-gray-900 capitalize text-sm sm:text-base">{finding.type}</span>
