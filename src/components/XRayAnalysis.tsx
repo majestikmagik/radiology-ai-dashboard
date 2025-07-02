@@ -59,7 +59,7 @@ export default function XRayAnalysis() {
     <div className="space-y-4 lg:space-y-6">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">X-Ray Analysis</h1>
-        <button className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg flex items-center justify-center space-x-2 text-sm sm:text-base">
+        <button className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg flex items-center justify-center space-x-2 text-sm sm:text-base cursor-pointer">
           <Download className="h-4 w-4" />
           <span>Export Report</span>
         </button>

@@ -23,7 +23,7 @@ export default function Header({ user, onMenuClick, showMenuButton = false }: He
           {showMenuButton && (
             <button
               onClick={onMenuClick}
-              className="p-2 rounded-lg text-gray-400 hover:text-gray-600 hover:bg-gray-100 lg:hidden"
+              className="p-2 rounded-lg text-gray-400 hover:text-gray-600 hover:bg-gray-100 lg:hidden cursor-pointer"
             >
               <Menu className="h-5 w-5" />
             </button>
@@ -51,7 +51,7 @@ export default function Header({ user, onMenuClick, showMenuButton = false }: He
           </button>
           
           {/* Notifications */}
-          <button className="relative p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 rounded-lg">
+          <button className="relative p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 rounded-lg cursor-pointer">
             <Bell className="h-4 w-4 sm:h-5 sm:w-5" />
             <span className="absolute top-0 right-0 block h-2 w-2 rounded-full bg-red-400 ring-2 ring-white"></span>
           </button>

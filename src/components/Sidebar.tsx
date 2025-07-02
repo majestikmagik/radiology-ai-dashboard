@@ -2,7 +2,6 @@
 
 import { 
   Users, 
-  FileText, 
   Brain, 
   BarChart3, 
   Settings, 
@@ -57,7 +56,7 @@ export default function Sidebar({ activeTab, onTabChange, isOpen, onToggle, isMo
                     }`}
                   >
                     <Icon className={`h-4 w-4 lg:h-5 lg:w-5 ${isActive ? 'text-blue-700' : 'text-gray-400'}`} />
-                    <span className="font-medium text-sm lg:text-base">{item.label}</span>
+                    <span className="font-medium text-sm lg:text-base cursor-pointer">{item.label}</span>
                   </button>
                 </li>
               );

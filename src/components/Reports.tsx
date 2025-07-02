@@ -100,11 +100,11 @@ export default function Reports() {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">Reports</h1>
         <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-3">
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg flex items-center justify-center space-x-2 text-sm sm:text-base">
+          <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg flex items-center justify-center space-x-2 text-sm sm:text-base cursor-pointer">
             <FileText className="h-4 w-4" />
             <span>Custom Report</span>
           </button>
-          <button className="border border-gray-300 hover:bg-gray-50 text-gray-700 px-4 py-2 rounded-lg flex items-center justify-center space-x-2 text-sm sm:text-base">
+          <button className="border border-gray-300 hover:bg-gray-50 text-gray-700 px-4 py-2 rounded-lg flex items-center justify-center space-x-2 text-sm sm:text-base cursor-pointer">
             <Filter className="h-4 w-4" />
             <span>Filter</span>
           </button>
@@ -134,7 +134,7 @@ export default function Reports() {
                           <span>Frequency: {template.frequency}</span>
                           <span>Last: {template.lastGenerated}</span>
                         </div>
-                        <button className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1.5 rounded text-xs sm:text-sm flex-shrink-0">
+                        <button className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1.5 rounded text-xs sm:text-sm flex-shrink-0 cursor-pointer">
                           Generate
                         </button>
                       </div>
@@ -216,8 +216,8 @@ export default function Reports() {
                     <div className="flex space-x-2">
                       {report.status === 'Completed' && (
                         <>
-                          <button className="text-blue-600 hover:text-blue-900">View</button>
-                          <button className="text-green-600 hover:text-green-900 flex items-center">
+                          <button className="text-blue-600 hover:text-blue-900 cursor-pointer">View</button>
+                          <button className="text-green-600 hover:text-green-900 flex items-center cursor-pointer">
                             <Download className="h-3 w-3 mr-1" />
                             Download
                           </button>

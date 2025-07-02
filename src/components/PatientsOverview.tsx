@@ -107,7 +107,7 @@ export default function PatientsOverview() {
     <div className="space-y-4 lg:space-y-6">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">Patients Overview</h1>
-        <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg flex items-center justify-center space-x-2 text-sm sm:text-base">
+        <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg flex items-center justify-center space-x-2 text-sm sm:text-base cursor-pointer">
           <FileText className="h-4 w-4" />
           <span>New Patient</span>
         </button>
@@ -182,8 +182,8 @@ export default function PatientsOverview() {
                 </div>
               </div>
               <div className="flex space-x-3">
-                <button className="text-blue-600 hover:text-blue-900 text-sm font-medium">View</button>
-                <button className="text-green-600 hover:text-green-900 text-sm font-medium">Analyze</button>
+                <button className="text-blue-600 hover:text-blue-900 text-sm font-medium cursor-pointer">View</button>
+                <button className="text-green-600 hover:text-green-900 text-sm font-medium cursor-pointer">Analyze</button>
               </div>
             </div>
           ))}
@@ -245,8 +245,8 @@ export default function PatientsOverview() {
                     </span>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                    <button className="text-blue-600 hover:text-blue-900 mr-3">View</button>
-                    <button className="text-green-600 hover:text-green-900">Analyze</button>
+                    <button className="text-blue-600 hover:text-blue-900 mr-3 cursor-pointer">View</button>
+                    <button className="text-green-600 hover:text-green-900 cursor-pointer">Analyze</button>
                   </td>
                 </tr>
               ))}
