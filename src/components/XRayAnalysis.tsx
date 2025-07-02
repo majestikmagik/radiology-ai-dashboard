@@ -100,7 +100,7 @@ export default function XRayAnalysis() {
                   alt="Uploaded X-Ray" 
                   className="w-full h-48 sm:h-64 object-contain bg-black rounded-lg"
                 />
-                <button className="absolute top-2 right-2 bg-white p-1.5 sm:p-2 rounded-full shadow-lg hover:bg-gray-50">
+                <button className="absolute top-2 right-2 bg-white p-1.5 sm:p-2 rounded-full shadow-lg hover:bg-gray-50 cursor-pointer">
                   <Eye className="h-3 w-3 sm:h-4 sm:w-4 text-gray-600" />
                 </button>
               </div>
@@ -109,7 +109,7 @@ export default function XRayAnalysis() {
                 <button 
                   onClick={runAIAnalysis}
                   disabled={isAnalyzing}
-                  className="flex-1 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white px-4 py-2 rounded-lg flex items-center justify-center space-x-2 text-sm sm:text-base"
+                  className="flex-1 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white px-4 py-2 rounded-lg flex items-center justify-center space-x-2 text-sm sm:text-base cursor-pointer"
                 >
                   {isAnalyzing ? (
                     <>
@@ -126,7 +126,7 @@ export default function XRayAnalysis() {
                 
                 <button 
                   onClick={() => setUploadedImage(null)}
-                  className="px-4 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 text-sm sm:text-base"
+                  className="px-4 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 text-sm sm:text-base cursor-pointer"
                 >
                   Remove
                 </button>
